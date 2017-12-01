@@ -1,4 +1,11 @@
+import java.util.Map;
 
-public class Organism {
+public abstract class Organism {
+	
+	public Organism(Map<String, Integer> counts) {
+		
+	}
+	
+	
 
 }
