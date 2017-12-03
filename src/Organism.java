@@ -1,4 +1,4 @@
-import java.util.Map;
+
 
 public abstract class Organism {
     int energy;
@@ -31,6 +31,6 @@ public abstract class Organism {
 	
 	abstract double getCooperationProbability();
 	
-	abstract boolean cooperates()
+	abstract boolean cooperates();
 
 }
