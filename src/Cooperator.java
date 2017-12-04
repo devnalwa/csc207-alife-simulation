@@ -3,10 +3,10 @@ public class Cooperator extends Organism{
     
     public Cooperator() {    }
 
-    @Override
-    void update() {
-        this.energy--;
-    }
+//    @Override
+//    void update() {
+//        this.energy--;
+//    }
     
     String getType() {
         return "Cooperator";

@@ -1,14 +1,14 @@
 
-public class Defactor extends Organism{
+public class Defector extends Organism{
 
-    public Defactor() {    }
+    public Defector() {    }
     
     String getType() {
-        return "Defactor";
+        return "Defector";
     }
 
     Organism reproduce() {
-        return new Defactor();
+        return new Defector();
     }
 
     double getCooperationProbability() {
