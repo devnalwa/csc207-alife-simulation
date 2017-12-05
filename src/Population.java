@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Random;
 import java.util.Map.Entry;
@@ -14,7 +13,7 @@ public class Population {
 		
 		for (Entry<String, Integer> entry : counts.entrySet()) {
 			
-			if(!entry.getKey().equals("Cooperator") || !entry.getKey().equals("Defector") || !entry.getKey().equals("PartialCooperator")) {
+			if(!(entry.getKey().equals("Cooperator") || entry.getKey().equals("Defector") || entry.getKey().equals("PartialCooperator"))) {
 				throw new IllegalArgumentException();
 			}
 			for(int i = 0; i < entry.getValue(); i++) {
@@ -33,13 +32,11 @@ public class Population {
 	}
 
 	void update() {
-		//ArrayList<Organism> newOrganisms = new ArrayList<>();
 		ArrayList<Organism> lastOrganisms = (ArrayList<Organism>) lst.get(lst.size() - 1).clone();
 		Random rnd = new Random();
 		
 		Iterator<Organism> itr1 = lastOrganisms.iterator();
 		Iterator<Organism> itr2 = lastOrganisms.iterator();
-		//ListIterator<Organism> itr3 = lastOrganisms.listIterator();
 		
 		//Update every Organism
 		while(itr1.hasNext()) {
@@ -86,7 +83,7 @@ public class Population {
 		return sum / size;
 	}
 
-	Map<Organism, Integer> getPopulationCounts() {
+	Map<String, Integer> getPopulationCounts() {
 		int cntCooperator = 0;
 		int cntDefector = 0;
 		int cntPartialCooperator = 0;
@@ -108,10 +105,10 @@ public class Population {
 			}
 		}
 		
-		Map<Organism, Integer> ret= new HashMap<>();
-		ret.put(new Cooperator(), cntCooperator);
-		ret.put(new Defector(), cntDefector);
-		ret.put(new PartialCooperator(), cntPartialCooperator);
+		Map<String, Integer> ret= new HashMap<>();
+		ret.put("Cooperator", cntCooperator);
+		ret.put("Defector", cntDefector);
+		ret.put("PartialCooperator", cntPartialCooperator);
 		return ret;
 	}
 
