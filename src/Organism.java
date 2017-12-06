@@ -1,5 +1,3 @@
-
-
 public abstract class Organism {
     int energy;
 	

@@ -11,11 +11,14 @@ public class Population {
 	public Population(Map<String, Integer> counts) {
 		organisms = new ArrayList<>();
 
+		//Iterate through counts and construct a list of organisms
 		for (Entry<String, Integer> entry : counts.entrySet()) {
 
+			//Check counts contains only the three organisms. Otherwise, throws IllegalArgumentException.
 			if(!(entry.getKey().equals("Cooperator") || entry.getKey().equals("Defector") || entry.getKey().equals("PartialCooperator"))) {
 				throw new IllegalArgumentException();
 			}
+			//Add getValue() organisms into the list.
 			for(int i = 0; i < entry.getValue(); i++) {
 				if(entry.getKey().equals("Cooperator")) {
 					organisms.add(new Cooperator());
@@ -72,11 +75,15 @@ public class Population {
 			Organism org = organisms.get(i);
 			if(org.getEnergy() >= 10) {
 				Organism newOrg = org.reproduce();
-				organisms.set(rnd.nextInt(organisms.size()), newOrg);
+				int thisOrgNum = organisms.indexOf(org);
+				int rndNum = rnd.nextInt(organisms.size());
+				//To make sure random number does not corresponds to the reproducing organism.
+				while(thisOrgNum == rndNum) {
+					rndNum = rnd.nextInt(organisms.size());
+				}
+				organisms.set(rndNum, newOrg);
 			}
 		}
-
-
 	}
 
 	double calculateCooperationMean() {
