@@ -10,14 +10,14 @@ public class Defector extends Organism{
 
     Organism reproduce() {
     	//mutation
-    	Random rnd = new Random();
-    	if(rnd.nextInt(100) < 5) {
-    		if(rnd.nextBoolean() == true) {
-    			return new Cooperator();
-    		} else {
-    			return new PartialCooperator();
-    		}
-    	}
+//    	Random rnd = new Random();
+//    	if(rnd.nextInt(100) < 5) {
+//    		if(rnd.nextBoolean() == true) {
+//    			return new Cooperator();
+//    		} else {
+//    			return new PartialCooperator();
+//    		}
+//    	}
     	//end of mutation
         return new Defector();
     }

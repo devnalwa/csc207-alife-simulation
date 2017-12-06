@@ -6,11 +6,6 @@ public class ALifeSim {
 	public static void main(String args[]) {
 		Map<String, Integer> counts = new HashMap<>();
 		
-//		String[] args = new String[4];
-//		args[0] = "30";
-//		args[1] = "10";
-//		args[2] = "10";
-//		args[3] = "0";
 		
 		counts.put("Cooperator", Integer.parseInt(args[1]));
 		counts.put("Defector", Integer.parseInt(args[2]));
