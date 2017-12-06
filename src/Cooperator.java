@@ -1,18 +1,24 @@
+import java.util.Random;
 
 public class Cooperator extends Organism{
     
     public Cooperator() {    }
-
-//    @Override
-//    void update() {
-//        this.energy--;
-//    }
     
     String getType() {
         return "Cooperator";
     }
 
     Organism reproduce() {
+    	//mutation
+    	Random rnd = new Random();
+    	if(rnd.nextInt(100) < 5) {
+    		if(rnd.nextBoolean() == true) {
+    			return new Defector();
+    		} else {
+    			return new PartialCooperator();
+    		}
+    	}
+    	//end of mutation
         return new Cooperator();
     }
 
