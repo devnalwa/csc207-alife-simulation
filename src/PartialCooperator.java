@@ -10,14 +10,14 @@ public class PartialCooperator extends Organism{
 
     Organism reproduce() {
     	//mutation
-//    	Random rnd = new Random();
-//    	if(rnd.nextInt(100) < 5) {
-//    		if(rnd.nextBoolean() == true) {
-//    			return new Cooperator();
-//    		} else {
-//    			return new Defector();
-//    		}
-//    	}
+    	Random rnd = new Random();
+    	if(rnd.nextInt(100) < 5) {
+    		if(rnd.nextBoolean() == true) {
+    			return new Cooperator();
+    		} else {
+    			return new Defector();
+    		}
+    	}
     	//end of mutation
         return new PartialCooperator();
     }
