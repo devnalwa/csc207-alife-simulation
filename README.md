@@ -1,5 +1,13 @@
 # alife-simulation-dev-kohei
 
+1. A Life Simulation
+
+2. Dev Nalwa and Kohei Kotani
+
+3. Citation
+
+4. Report
+
 In this experiment, there is 1 cooperator and 9 defectors creating a
 population of 10. The cycle runs 100 times. Our prediction is that by the
 end of the 100 cycles, the mean cooperation probability will be 0 because
