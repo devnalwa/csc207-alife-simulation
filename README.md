@@ -5,6 +5,8 @@
 2. Dev Nalwa and Kohei Kotani
 
 3. Citation
+The table of the results can be seen from the link.
+https://docs.google.com/spreadsheets/d/1tntU3XnRHtAr8HR_gpPQ5vkodTeiXRMiy4pm0mZJeFQ/edit?usp=sharing
 
 4. Report
 
@@ -76,3 +78,32 @@ most cases, the cooperators try to replace the one defector. However, once
 the ratio of cooperators and defectors gets 1 to 1, which is low
 probability, the result will be only defectors. We confirmed this by
 running "ALifeSim 100 50 50 0" 10 times.
+
+In the last experiment, we give 33 cooperators, 33 defectors, and 33
+partial cooperators to the program. The program is set so that it runs 100
+cycles. Our prediction is that there will be 99 defectors at the end
+because cooperators give energies to others, and it is likely to happen that
+defectors gain enough energy and try to replace cooperators/partial
+cooperators. In the result, 9 cases produce 99 defectors, making the mean
+cooperation probablility 0, and 1 case shows that there are no cooperators,
+67 defectors, and 32 partial cooperators, making the mean cooperation
+probablity 0.16. The most cases in the result agree with our
+prediction. However, one case does not agree with our prediction. We
+believe that defectors were trying to replace the partial cooperators and
+dominate the environment. Thus, we assume that if we run more than 100
+cycles, there will be only defectors in last.
+
+Now, we enable the mutation function. This process allows organisms to
+reproduce a different type of organism at a percentage of 5%. Since the
+percentage for an organism to become a different type is low, we predict
+that in most cases, the results agree with the previous experiments, but a
+few cases will be unpredictable. The result is that when the total number
+of organisms is low, the results are similar to those without the mutation
+process. However, when the total number of organisms is significant, the
+results become unpredictable.
+
+In conclusion, we find that one initial setting does not always produce the
+same result. Cooperator succeeds in the simulation when the number of
+cooperators is much greater than that of defectors at initial. Otherwise,
+when the number of cooperators is close to that of defectors, cooperators
+go extinct. 
